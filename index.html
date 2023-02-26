@@ -1,0 +1,128 @@
+<div class=q>
+  урок
+</div>
+
+<ul>
+  <li class=a>lesson</li>
+  <li class=b>teacher</li>
+  <li class=c>car</li>
+</ul>
+
+<button class=ok>
+  ok
+</button>
+<button class=next>
+  next
+</button>
+
+<script>
+  let answer = "";
+document.addEventListener("click", e => {
+  // if name of the element tag is "li" then
+  if (e.target.tagName === "LI") {
+    const answers = document.querySelectorAll("li");
+    for (let a of answers) {
+      a.style.color = "black";
+    }
+    e.target.style.color = "yellow";
+    answer = e.target.innerText;
+    clic1 = true;
+  }
+  // if name of the element tag is "button" then 
+
+})
+document.addEventListener("click", e => {
+  if (e.target.className === "ok") {
+    clic2 = true;
+    if (answer === "ceiling") {
+      e.target.style.color = "green"
+    }
+    if (answer === "lesson") {
+      e.target.style.color = "green"
+    } else {
+      e.target.style.color = "red"
+    }
+
+  }
+})
+
+
+
+
+
+document.addEventListener("click", e => {
+  // element div
+  // set div innerText = "sdfdsf"
+  if (e.target.className === "next") {
+    let word = document.querySelector(".q");
+    word.innerText = "потолок"
+
+    // element div
+    // set div innerText = "sdfdsf"
+    word = document.querySelector(".a");
+    word.innerText = "ceiling"
+
+
+
+    // element div
+    // set div innerText = "sdfdsf"
+    word = document.querySelector(".b");
+    word.innerText = "user"
+
+
+
+    // element div
+    // set div innerText = "sdfdsf"
+    word = document.querySelector(".c");
+    word.innerText = "dragon"
+
+  }
+})
+</script>
+
+<style>
+  ul {
+  color: black;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+
+button {
+  color: bleack;
+
+  font-size: 23px;
+  line-height: 30px;
+}
+
+div {
+  color: red;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+button:hover {
+  color: yellow
+}
+
+b {
+  color: bleack;
+
+  font-size: 23px;
+  line-height: 30px;
+}
+
+div {
+  color: red;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+b:hover {
+  color: yellow
+}
+
+</style>
