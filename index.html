@@ -70,9 +70,11 @@ document.addEventListener("click", e => {
 
   if (e.target.className === "ok") {
     if (answer === answerOK) {
-      statusText.innerText = "Correct"
+      statusText.innerText = "Correct";
+      statusText.style.color = "green";
     } else {
-      statusText.innerText = "Wrong"
+      statusText.innerText = "Wrong";
+      statusText.style.color = "red";
     }
   }
 
@@ -94,9 +96,15 @@ document.addEventListener("click", e => {
 div {
   color: red;
 }
+
+li:hover {
+  cursor: pointer;
+  color: yellow;
+}
   
 button {
   font-size: inherit;
+  margin-bottom: 20px;
 }
 
 </style>
