@@ -1,7 +1,7 @@
 window.dictionary = {
   "ceiling": "потолок",
   "floor": "пол",
-  "danger": "опастность",
+  "danger": "опасность",
   "everybody": "каждый,все",
   "somebody": "кто-нибудь", 
   "carpet": "ковёр", 
@@ -10,7 +10,7 @@ window.dictionary = {
   "fall": "падать",  
   "brave": "смелый", 
   "steel": "сталь", 
-  "brake": " ломать",
+  "brake": "ломать",
   "plate": "тарелка",
   "teapot": "чайник",
   "Mountain": "гора",
