@@ -13,18 +13,9 @@
 
 <script src="dictionary.js"></script>
 <script>
-console.log(window.dictionary);
 
 let answer = "";
 let answerOK = "";
-
-const questions = [
-  {q: "урок", a: "lesson", b: "learn", c: "study", ok: "lesson"},
-  {q: "потолок", a: "ceiling", b: "flat", c: "floor", ok: "ceiling"},
-  {q: "oпастность", a: "vacuum", b: "danger", c: "carper", ok: "danger"},
-  {q: "flat", a: "комната", b: "площадь", c: "квартира", ok: "комната"},
-  {q: "forget", a: "задавать", b: "забывать", c: "заводить", ok: "забывать"}
-]
 
 const question = document.querySelector(".q");
 
@@ -38,10 +29,16 @@ const statusText = document.querySelector(".status");
 
 let index = 0;
 const reset = () => {
-  const {q,a,b,c,ok} = questions[index];
+  const dict = window.dictionary;
+  const questions = Object.keys(dict);
+  const q = questions[index];
+  const getRandomIndex = () => Math.floor(Math.random * (questions.length - 1));
+  const a = questions[getRandomIndex()];
+  const b = questions[getRandomIndex()];
+  const c = questions[getRandomIndex()];
 
   answer = "";
-  answerOK = ok;
+  answerOK = dict[q];
 
   question.innerText = q;
   optionA.innerText = a;
