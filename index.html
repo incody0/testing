@@ -1,11 +1,9 @@
-<div class=q>
-  урок
-</div>
+<div class=q></div>
 
 <ul>
-  <li class=a>lesson</li>
-  <li class=b>teacher</li>
-  <li class=c>car</li>
+  <li class=a></li>
+  <li class=b></li>
+  <li class=c></li>
 </ul>
 
 <button class=ok>
@@ -15,10 +13,52 @@
   next
 </button>
 
+<span class=status></span>
+
 <script>
-  let answer = "";
+
+let answer = "";
+let answerOK = "";
+
+const questions = [
+  {q: "урок", a: "lesson", b: "learn", c: "study", ok: "lesson"},
+  {q: "потолок", a: "ceiling", b: "flat", c: "floor", ok: "ceiling"}
+]
+
+const question = document.querySelector(".q");
+
+const optionA = document.querySelector(".a");
+const optionB = document.querySelector(".b");
+const optionC = document.querySelector(".c");
+
+const btnOK = document.querySelector(".ok");
+const btnNext = document.querySelector(".next");
+
+const statusText = document.querySelector(".status");
+
+const index = 0;
+const reset = () => {
+  const {q,a,b,c,ok} = questions[index];
+
+  answer = "";
+  answerOK = ok;
+
+  question.innerText = q;
+  optionA.innerText = a;
+  optionB.innerText = b;
+  optionC.innerText = c;
+  optionA.style.color = "black";
+  optionB.style.color = "black";
+  optionC.style.color = "black";
+  statusText.innerText = "";
+
+  index++;
+  if (index >= questions.length) index = 0;
+} 
+
+reset();
+
 document.addEventListener("click", e => {
-  // if name of the element tag is "li" then
   if (e.target.tagName === "LI") {
     const answers = document.querySelectorAll("li");
     for (let a of answers) {
@@ -26,56 +66,18 @@ document.addEventListener("click", e => {
     }
     e.target.style.color = "yellow";
     answer = e.target.innerText;
-    clic1 = true;
   }
-  // if name of the element tag is "button" then 
 
-})
-document.addEventListener("click", e => {
   if (e.target.className === "ok") {
-    clic2 = true;
-    if (answer === "ceiling") {
-      e.target.style.color = "green"
-    }
-    if (answer === "lesson") {
-      e.target.style.color = "green"
+    if (answer === answerOK) {
+      statusText.innerText = "Correct"
     } else {
-      e.target.style.color = "red"
+      statusText.innerText = "Wrong"
     }
-
   }
-})
 
-
-
-
-
-document.addEventListener("click", e => {
-  // element div
-  // set div innerText = "sdfdsf"
   if (e.target.className === "next") {
-    let word = document.querySelector(".q");
-    word.innerText = "потолок"
-
-    // element div
-    // set div innerText = "sdfdsf"
-    word = document.querySelector(".a");
-    word.innerText = "ceiling"
-
-
-
-    // element div
-    // set div innerText = "sdfdsf"
-    word = document.querySelector(".b");
-    word.innerText = "user"
-
-
-
-    // element div
-    // set div innerText = "sdfdsf"
-    word = document.querySelector(".c");
-    word.innerText = "dragon"
-
+    reset();
   }
 })
 </script>
@@ -86,6 +88,7 @@ document.addEventListener("click", e => {
     margin: auto;
     font-size: 50px;
     padding: 50px;
+    font-family: "sans-serif";
   }
 
 div {
@@ -94,10 +97,6 @@ div {
   
 button {
   font-size: inherit;
-  }
-
-button:hover {
-  color: yellow
 }
 
 </style>
