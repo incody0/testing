@@ -32,10 +32,10 @@ const reset = () => {
   const dict = window.dictionary;
   const questions = Object.keys(dict);
   const q = questions[index];
-  const getRandomIndex = () => Math.floor(Math.random * (questions.length - 1));
-  const a = questions[getRandomIndex()];
-  const b = questions[getRandomIndex()];
-  const c = questions[getRandomIndex()];
+  const getIndex = inc => index + inc >= questions.length ? inc : index + inc;
+  const a = dict[questions[getIndex(1)]];
+  const b = dict[questions[getIndex(2)]];
+  const c = dict[questions[getIndex(3)]];
 
   answer = "";
   answerOK = dict[q];
