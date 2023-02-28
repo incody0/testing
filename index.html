@@ -9,10 +9,6 @@
 <button class=ok>
   ok
 </button>
-<button class=next>
-  next
-</button>
-
 <span class=status></span>
 
 <script>
@@ -32,7 +28,6 @@ const optionB = document.querySelector(".b");
 const optionC = document.querySelector(".c");
 
 const btnOK = document.querySelector(".ok");
-const btnNext = document.querySelector(".next");
 
 const statusText = document.querySelector(".status");
 
@@ -70,16 +65,11 @@ document.addEventListener("click", e => {
 
   if (e.target.className === "ok") {
     if (answer === answerOK) {
-      statusText.innerText = "Correct";
-      statusText.style.color = "green";
+      reset();
     } else {
       statusText.innerText = "Wrong";
       statusText.style.color = "red";
     }
-  }
-
-  if (e.target.className === "next") {
-    reset();
   }
 })
 </script>
@@ -99,12 +89,12 @@ div {
 
 li:hover {
   cursor: pointer;
-  color: yellow;
+  text-decoration: underline;
 }
   
 button {
   font-size: inherit;
-  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 </style>
