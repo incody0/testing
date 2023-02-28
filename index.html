@@ -33,11 +33,11 @@ const reset = () => {
   const questions = Object.keys(dict);
   const q = questions[index];
   const getIndex = inc => index + inc >= questions.length ? inc : index + inc;
-  const answers = Math.random > 0.6 ? [
+  const answers = Math.random() > 0.6 ? [
     dict[questions[getIndex(1)]], 
     dict[questions[getIndex(0)]], 
     dict[questions[getIndex(5)]]
-  ] : Math.random > 0.3 ? [
+  ] : Math.random() > 0.3 ? [
     dict[questions[getIndex(5)]], 
     dict[questions[getIndex(0)]], 
     dict[questions[getIndex(1)]]
