@@ -1,4 +1,5 @@
 window.dictionary = {
+  "wrong": "неверно",
   "ceiling": "потолок",
   "floor": "пол",
   "danger": "опасность",
