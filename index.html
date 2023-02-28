@@ -33,17 +33,27 @@ const reset = () => {
   const questions = Object.keys(dict);
   const q = questions[index];
   const getIndex = inc => index + inc >= questions.length ? inc : index + inc;
-  const a = dict[questions[index]];
-  const b = dict[questions[getIndex(2)]];
-  const c = dict[questions[getIndex(5)]];
+  const answers = Math.random > 0.6 ? [
+    dict[questions[getIndex(1)]], 
+    dict[questions[getIndex(0)]], 
+    dict[questions[getIndex(5)]]
+  ] : Math.random > 0.3 ? [
+    dict[questions[getIndex(5)]], 
+    dict[questions[getIndex(0)]], 
+    dict[questions[getIndex(1)]]
+  ] : [
+    dict[questions[getIndex(5)]], 
+    dict[questions[getIndex(1)]], 
+    dict[questions[getIndex(0)]]
+  ];
 
   answer = "";
   answerOK = dict[q];
 
   question.innerText = q;
-  optionA.innerText = a;
-  optionB.innerText = b;
-  optionC.innerText = c;
+  optionA.innerText = answers[0];
+  optionB.innerText = answers[1];
+  optionC.innerText = answers[2];
   optionA.style.color = "black";
   optionB.style.color = "black";
   optionC.style.color = "black";
