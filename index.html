@@ -33,9 +33,9 @@ const reset = () => {
   const questions = Object.keys(dict);
   const q = questions[index];
   const getIndex = inc => index + inc >= questions.length ? inc : index + inc;
-  const a = dict[questions[getIndex(1)]];
+  const a = dict[questions[index]];
   const b = dict[questions[getIndex(2)]];
-  const c = dict[questions[getIndex(3)]];
+  const c = dict[questions[getIndex(5)]];
 
   answer = "";
   answerOK = dict[q];
