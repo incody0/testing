@@ -2,15 +2,15 @@ const dictionary = {
   "ceiling": "потолок",
   "floor": "пол",
   "danger": "опастность",
-"everybody": "каждый,все",
- "somebody": "кто-нибудь", 
- "carpet": "кавёр", 
- "flat": "квартира", 
-"vacuum cleaner": "пылесос",
-"fall": "падать",  
- "brave": "смелый", 
- "steel": "сталь", 
-"brake": " ломаться",
+  "everybody": "каждый,все",
+  "somebody": "кто-нибудь", 
+  "carpet": "ковёр", 
+  "flat": "квартира", 
+  "vacuum cleaner": "пылесос",
+  "fall": "падать",  
+  "brave": "смелый", 
+  "steel": "сталь", 
+  "brake": " ломать",
   "plate": "тарелка",
   "teapot": "чайник",
   "Mountain": "гора",
@@ -20,38 +20,25 @@ const dictionary = {
   "You had a card": "у тебя была карта",
   "Just": "только что",
   "If": "если",
-"Anyon": "любой",
-  "Witc": "с",
+  "Anyone": "любой",
+  "With": "с",
   "Could": "могли",
   "Allow": "разрешать",
   "Believe": "Верить",
-
-"Only": "Только",
-
-"Adjust": "Настраивать",
+  "Only": "Только",
+  "Adjust": "Настраивать",
   "Any": "Любое",
   "Must be done": "Должно быть сделано",
-
-"Hide": "Прятать",
-
-"Enough": "Достаточно",
-
-"Not enough": "Не достаточно",
+  "Hide": "Прятать",
+  "Enough": "Достаточно",
+  "Not enough": "Не достаточно",
   "Abilities": "Способности",
-
-"Often": "Часто",
-
-"Speed": "Скорость",
+  "Often": "Часто",
+  "Speed": "Скорость",
   "Everything": "Все",
-
-"Between": "Между",
-
-"Large": "Большой",
-
-"Area": "Область",
-
-"Small -> Medium -> Large -> Extra Large -> Huge": "Маленький - Средний - Большой - Очень большой - Огромный",
-
-"In the middle": "В середине"
-
+  "Between": "Между",
+  "Large": "Большой",
+  "Area": "Область",
+  "Small -> Medium -> Large -> Extra Large -> Huge": "Маленький - Средний - Большой - Очень большой - Огромный",
+  "In the middle": "В середине"
 }
