@@ -1,4 +1,4 @@
-const dictionary = {
+window.dictionary = {
   "ceiling": "потолок",
   "floor": "пол",
   "danger": "опастность",
